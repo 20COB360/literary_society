@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    background-color: #0a402b;
+    background-image: url(../Images/ELEMENT.png);
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+
+hr {
+    width: 100%;
+    height: 0.25vw;
+    color: white;
+    background-color: white;
+}
+
+img {
+    width: 100%;
+}
+
+button {
+    border-radius: 5px;
+    border-style: none;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: gold;
+    scale: 1.01;
+}
+
+.tag {
+    background-color: #efd994;
+    display: inline-block;
+    position: relative;
+    color: #184041;
+    margin: 1.5vw 0vw;
+    position: relative;
+    padding-right: 2.5vw;
+    width: 70%;
+}
+
+.details {
+    margin: .7vw 2.5vw;
+}
+
+.tag::before,
+.details::after {
+    display: block;
+    content: '';
+    position: absolute;
+    background-color: #000;
+}
+
+.details::after {
+    width: 90%;
+    height: .25vw;
+    inset: auto 0;
+}
+
+.tag::before {
+    inset: 0 auto;
+    height: 100%;
+    width: .25vw;
+    margin-left: 1.8vw;
+}
+
+.details p {
+    font-style: italic;
+    font-size: 1.3vw;
+}
+
+.details h1 {
+    font-size: 5vw;
+}
+
+.author {
+    text-align: right;
+    font-style: italic;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    padding: 2vw;
+}
+
+.container2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+    flex-wrap: nowrap;
+    margin: auto;
+    padding: 2vw;
+}
+
+.content {
+    color: white;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.content p {
+    text-align: justify;
+}
+
+.article-img {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 2vw;
+}
+
+
+.img-card {
+    width: 25%;
+    text-align: center;
+}
+
+.img-card img {
+    width: 50%;
+    margin: auto;
+    border: .05vw solid #d9bb15;
+}
+
+.img-card h5 {
+    color: #ddbb15;
+}
+
+.img-card p {
+    color: white;
+}
+
+.dialog {
+    width: 60%;
+    background-color: #d9bc154f;
+    padding: 1vw 2vw;
+    color: white;
+}

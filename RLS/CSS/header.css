@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border-radius: 5px;
+    border-style: none;
+    background-color: #efd994;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: gold;
+    scale: 1.01;
+}
+
+.header {
+    background: url(../Images/bg2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: .3vw solid white;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo {
+    width: 9vw;
+    height: fit-content;
+}
+
+.name {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.r {
+    width: 7.5vw;
+    height: fit-content;
+}
+
+.title {
+    height: fit-content;
+    align-items: center;
+}
+
+.title h1 {
+    font-size: 3.5vw;
+    color: white;
+}
+
+.links {
+    width: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.insta {
+    width: 5vw;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.insta-img:hover {
+    scale: 1.05;
+    cursor: pointer;
+}
+
+.youtube {
+    width: 8vw;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.youtube-img:hover {
+    scale: 1.05;
+    cursor: pointer;
+}
+
+.menu {
+    width: 7vw;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.menu-img:hover {
+    /* scale: 1.05; */
+    cursor: pointer;
+    transform: rotate(-90deg);
+    transition-duration: 1s;
+}
+
+.navpanel {
+    display: none;
+    text-align: right;
+    width: 20vw;
+    background-color: #152b16;
+    border-top: .35vw solid #ddbb15;
+    border-bottom: .35vw solid #ddbb15;
+    position: absolute;
+    right: 0vw;
+    top: 9.7vw;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.side-panel {
+    position: absolute;
+    right: 20vw;
+    top: 17.5vw;
+    z-index: 2;
+}
+
+.navpanel a {
+    display: block;
+    font-size: 1.09vw;
+    text-align: center;
+    color: #d9bb15;
+    padding: 1vw;
+    border-top: .05vw solid gray;
+    border-bottom: .05vw solid gray;
+    margin: .5vw 2vw;
+    /* added */
+    box-shadow: 0vw 0vw 1vw 0vw;
+    /* added */
+}
+
+.linkbtn {
+    display: block;
+    font-size: 1.09vw;
+    text-align: center;
+    color: #d9bb15;
+    padding: 1vw;
+    border-top: .05vw solid gray;
+    border-bottom: .05vw solid gray;
+    width: 50%;
+    margin: .5vw 2vw;
+    /* added */
+    box-shadow: 0vw 0vw 1vw 0vw;
+    /* added */
+    background-color: #152b16;
+    /* added */
+
+}
+
+.linkbtn:hover {
+    background-color: #152b16;
+    color: black;
+    background-color: greenyellow;
+    scale: 1.15;
+}
+
+.navpanel a:hover {
+    background-color: #152b16;
+    background-color: greenyellow;
+    scale: 1.15;
+    color: black;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}

@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    background-color: #0a402b;
+    background-image: url(../Images/ELEMENT.png);
+    background-size: cover;
+    background-repeat: repeat-y;
+}
+
+hr {
+    width: 100%;
+    height: 0.25vw;
+    color: white;
+    background-color: white;
+}
+
+img {
+    width: 100%;
+}
+
+button {
+    border-radius: 5px;
+    border-style: none;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: gold;
+    scale: 1.01;
+}
+
+.container {
+    background-color: #efd994;
+    margin: 1.5vw 0vw;
+    padding: 1vw;
+    height: 12vw;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    position: relative;
+}
+
+.titlepng {
+    width: 19vw;
+}
+
+.container::before,
+.container::after {
+    display: block;
+    content: '';
+    position: absolute;
+    height: .3vw;
+    width: .3vw;
+    background-color: #000;
+}
+
+.container::after {
+    width: 76%;
+    inset: auto 0;
+    top: 87%;
+}
+
+.container::before {
+    inset: 0 auto;
+    height: 100%;
+}
+
+.event {
+    color: #184041;
+    font-size: 10vw;
+    display: inline-block;
+    padding-left: 1vw;
+}
+
+.img-container {
+    /* display: flex;
+    flex-wrap: nowrap; */
+}
+
+.landscape-card img {
+    width: 18vw;
+    height: 12vw;
+}
+
+.portrait-card img {
+    width: 12vw;
+    height: 18vw;
+}
+
+.landscape-card {
+    position: relative;
+    padding: 2vw 1vw 3vw 1vw;
+    background-color: white;
+    display: inline-block;
+}
+
+.portrait-card {
+    position: relative;
+    padding: 2vw 1vw 3vw 1vw;
+    background-color: white;
+    display: inline-block;
+}
+
+.img-card1,
+.img-card7 {
+    transform: rotate(-15deg);
+    z-index: 3;
+}
+
+.img-card1 {
+    left: 9vw;
+    top: 3vw;
+}
+
+.img-card2 {
+    transform: rotate(-3deg);
+    z-index: 4;
+    left: 2vw;
+    top: 14vw;
+}
+
+.img-card3 {
+    left: -7vw;
+}
+
+.img-card3,
+.img-card6 {
+    transform: rotate(-8deg);
+    z-index: 2;
+    top: 2vw;
+}
+
+
+.img-card4 {
+    transform: rotate(3deg);
+    z-index: 0;
+    top: 5vw;
+    left: -8.25vw;
+}
+
+.img-card5 {
+    transform: rotate(15deg);
+    z-index: 1;
+    left: -15vw;
+    top: 14vw;
+}
+
+.img-card6 {
+    left: -17vw;
+}
+
+.img-card7 {
+    left: 68vw;
+    top: -6vw;
+}
+
+.details-container {
+    width: 90%;
+    margin: auto;
+    background-color: rgba(183, 169, 22, 0.321);
+    padding: 1vw;
+    margin-bottom: 2vw;
+}
+
+.details-container p {
+    font-size: 1.5vw;
+    color: white;
+    text-align: justify;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #00000085;
+    z-index: 100;
+}
+
+.mySlides {
+    display: none
+}
+
+.mySlides img {
+    vertical-align: middle;
+    max-height: 60vh;
+    object-fit: contain;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-height: 70vh;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    top: 14vh;
+    background-color: antiquewhite;
+    padding: 1.5vw;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 1.5vw;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}

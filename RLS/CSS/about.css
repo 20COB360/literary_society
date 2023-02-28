@@ -1,0 +1,52 @@
+* {
+    text-decoration: none;
+}
+
+.nav-panel {
+    z-index: 5;
+}
+
+.slider {
+
+    background-size: cover;
+    width: 100vw;
+    height: 35vw;
+    overflow: hidden;
+}
+
+.slider img {
+    display: block;
+    width: 100%;
+    height: inherit;
+    overflow: hidden;
+}
+
+.container3 {
+    padding-top: 5vw;
+    /* background: url('../Images/bg3.jpg');
+    background-size: cover; */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-item {
+    height: 40vw;
+}
+
+.carousel-item img {
+    height: 100%;
+}
+
+.content p {
+    color: white;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 4vw;
+    padding: 1vw;
+    background-color: black;
+}

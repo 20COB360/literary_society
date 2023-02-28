@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.containerx {
+    display: flex;
+    align-items: center;
+}
+
+.containerx img {
+    width: 15vw;
+}
+
+.explore {
+    display: inline-block;
+    font-size: 6vw;
+    margin: 3vw 0vw;
+    padding: 1vw;
+    color: #0a402b;
+    background-color: white;
+}
+
+.sort {
+    padding: 2vw;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 90%;
+    margin: auto;
+    justify-items: space-evenly;
+    align-items: center;
+}
+
+.sort h4 {
+    color: white;
+    font-size: 2.0vw;
+    font-weight: lighter;
+}
+
+.refine {
+    margin: 0vw .5vw;
+    background-color: #0a402b00;
+    color: white;
+    font-size: 1.5vw;
+    font-weight: lighter;
+}
+
+label {
+    color: white;
+    font-size: 2.0vw;
+    font-weight: lighter;
+    margin-left: 3vw;
+}
+
+select {
+    color: white;
+    font-size: 1.5vw;
+    background-color: #0a402b00;
+    margin-left: 1vw;
+}
+
+option {
+    padding: 4vw;
+    background-color: #152b16;
+    border-top: .35vw solid #ddbb15;
+    border-bottom: .35vw solid #ddbb15;
+    color: #d9bb15;
+    font-size: 1.5vw;
+    font-weight: lighter;
+}
+
+.refine:hover {
+    background-color: #0a402b00;
+    scale: 1.25;
+}
+
+.container {
+    background-color: #efd894c2;
+    width: 90%;
+    margin: auto;
+    padding: 1vw 1.5vw;
+    margin-bottom: 3vw;
+}
+
+.content {
+    padding: 0.5vw;
+    border-bottom: .05vw solid white;
+    display: block;
+}
+
+.title,
+.author {
+    color: #0a402b;
+    font-size: 2vw;
+}
+
+.author {
+    font-weight: lighter;
+    font-size: 1.5vw;
+}
