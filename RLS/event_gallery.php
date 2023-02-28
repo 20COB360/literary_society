@@ -23,87 +23,42 @@ include('./header.html')
     </div>
     <div class="container1">
         <?php
-        $sql = "Select * from articles WHERE featured='YES' ORDER BY timestamp DESC limit 2 ";
+        $sql = "Select * from events ORDER BY timestamp DESC ";
         $result = mysqli_query($conn, $sql);
+        $num = mysqli_num_rows($result);
 
-        $row1 = mysqli_fetch_assoc($result);
-        $num = mysqli_num_rows($result);
         if ($num) {
-            $article_part = strlen($row1['article']) > 30 ? substr($row1['article'], 0, 250) : $row1['article'];
-            $title_part = strlen($row1['title']) > 30 ? substr($row1['title'], 0, 50) : $row1['title'];
+            while($row = mysqli_fetch_assoc($result)){
+            $event_name = strlen($row['event_name']) > 100 ? substr($row['event_name'], 0, 50) : $row['event_name'];
+
+            $event_report = strlen($row['event_report']) > 100 ? substr($row['event_report'], 0, 250) : $row['event_report'];
+
+           $imgKey= $row['foreign_key'] ;
+         
+
+            $sqlNew = "Select * from event_images WHERE event_key='$imgKey'";
+            $resultNew = mysqli_query($conn, $sqlNew);
+    
+            $img = mysqli_fetch_assoc($resultNew);
+           
             echo '<div class="box1">
-    
             <div class="image box1-img">
-                <img src="../admin/upload/' . $row1['cover_image'] . '" alt="">
+                <img src="../admin/event_images/' . $img['image_name'] . '" alt="">
             </div>
     
             <div class="details">
                 <div class="heading">
-                    <p>' . $title_part . '</p>
+                    <p>' . $event_name . '...</p>
                 </div>
                 <div class="para">
-                    <p>' . $article_part . '</p>
-                    <a href="./individual_articles.php?article_id=' . $row1['article_id'] . '" ><i>Read more...</i></a>
+                    <p>' . $event_report . '...</p>
+                    <a href="./event_page.php?event_id=' . $row['foreign_key'] . '" ><i>Read more...</i></a>
                 </div>
             </div>
         </div>';
+            };
         }
-        $row2 = mysqli_fetch_assoc($result);
-        $article_part = substr($row2['article'], 0, 250);
-        $title_part = substr($row2['title'], 0, 50);
-        echo '<div class="box11">
-            <div class="details">
-                <div class="heading">
-                    <p>' . $title_part . '</p>
-                </div>
-                <div class="para">
-                    <p>' . $article_part . '</p>
-                    <a href="./individual_articles.php?article_id=' . $row2['article_id'] . '" ><i>Read more...</i></a>
-                </div>
-            </div>
-            <div class="image box11-img">
-                <img  src="../admin/upload/' . $row2['cover_image'] . '"   alt="">
-            </div>
-        </div>';
-        $row1 = mysqli_fetch_assoc($result);
-        $num = mysqli_num_rows($result);
-        if ($num) {
-            $article_part = strlen($row1['article']) > 30 ? substr($row1['article'], 0, 250) : $row1['article'];
-            $title_part = strlen($row1['title']) > 30 ? substr($row1['title'], 0, 50) : $row1['title'];
-            echo '<div class="box1">
-    
-            <div class="image box1-img">
-                <img src="../admin/upload/' . $row1['cover_image'] . '" alt="">
-            </div>
-    
-            <div class="details">
-                <div class="heading">
-                    <p>' . $title_part . '</p>
-                </div>
-                <div class="para">
-                    <p>' . $article_part . '</p>
-                    <a href="./individual_articles.php?article_id=' . $row1['article_id'] . '" ><i>Read more...</i></a>
-                </div>
-            </div>
-        </div>';
-        }
-        $row2 = mysqli_fetch_assoc($result);
-        $article_part = substr($row2['article'], 0, 250);
-        $title_part = substr($row2['title'], 0, 50);
-        echo '<div class="box11">
-            <div class="details">
-                <div class="heading">
-                    <p>' . $title_part . '</p>
-                </div>
-                <div class="para">
-                    <p>' . $article_part . '</p>
-                    <a href="./individual_articles.php?article_id=' . $row2['article_id'] . '" ><i>Read more...</i></a>
-                </div>
-            </div>
-            <div class="image box11-img">
-                <img  src="../admin/upload/' . $row2['cover_image'] . '"   alt="">
-            </div>
-        </div>';
+        
         ?>
     </div>
     <?php
